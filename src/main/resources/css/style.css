@@ -1,0 +1,52 @@
+.sidebar {
+    -fx-background-color: #ede7f6; /* CHANGED: A very light purple */
+    -fx-border-color: #d1c4e9;   /* CHANGED: A soft purple border */
+    -fx-border-width: 0 1 0 0;
+    -fx-alignment: top-center;
+}
+
+.sidebar-header {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10px 0;
+    -fx-border-color: #5e35b1; /* CHANGED: A strong purple accent */
+    -fx-border-width: 0 0 2px 0;
+    -fx-text-fill: #311b92;    /* CHANGED: Dark purple text */
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 30px;
+    -fx-text-fill: #4527a0; /* CHANGED: Dark purple text */
+}
+
+.list-cell:hover {
+    -fx-background-color: #d1c4e9; /* CHANGED: Soft purple for hover */
+}
+
+.main-content {
+    -fx-background-color: #f8f7fa; /* CHANGED: A very light lavender-white for the main background */
+}
+
+.content-header {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #311b92; /* CHANGED: Dark purple text */
+}
+
+.course-card {
+    -fx-border-color: #b39ddb; /* CHANGED: A medium purple for the border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: white;
+    -fx-padding: 40px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 2);
+    -fx-text-fill: #311b92; /* CHANGED: Dark purple text */
+}

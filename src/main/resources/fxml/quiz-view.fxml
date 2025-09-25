@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" stylesheets="@/css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aicharya.controller.QuizController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label fx:id="quizTitleLabel" styleClass="header-label" text="Quiz Title" />
+      <VBox fx:id="quizContentBox" alignment="CENTER_LEFT" spacing="10.0" styleClass="course-card">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label fx:id="questionLabel" text="This is where the quiz question will appear." wrapText="true" />
+            <VBox fx:id="optionsVBox" spacing="10.0">
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+               </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" spacing="20.0">
+         <children>
+            <Button onAction="#handleGoBackAction" text="Go Back" />
+            <Button onAction="#handleSubmitAction" text="Submit" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

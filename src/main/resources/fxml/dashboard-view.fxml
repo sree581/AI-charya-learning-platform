@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@/css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aicharya.controller.DashboardController">
+   <left>
+      <VBox styleClass="sidebar" prefWidth="250.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <children>
+            <Label styleClass="sidebar-header" text="PROFILE" />
+            <ListView fx:id="navigationList" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox styleClass="main-content" spacing="20.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ComboBox fx:id="courseComboBox" promptText="SELECT COURSE" />
+               </children>
+            </HBox>
+            <Label styleClass="content-header" text="MY COURSES" />
+            <HBox fx:id="coursesContainer" spacing="20.0" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
