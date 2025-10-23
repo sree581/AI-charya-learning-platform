@@ -7,11 +7,11 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED) // Tells JPA how to handle inheritance
-public abstract class LearningResource { // Abstract: cannot be created directly
+@Inheritance(strategy = InheritanceType.JOINED) 
+public abstract class LearningResource { 
 
     @Id
-    private String resourceId; // from -resourceId: String
+    private String resourceId; 
 
     private String title;
     private String description;
@@ -21,8 +21,8 @@ public abstract class LearningResource { // Abstract: cannot be created directly
     @ManyToOne
     private Subject subject;
 
-    // Getters and Setters
+    
     public String getResourceId() { return resourceId; }
     public void setResourceId(String resourceId) { this.resourceId = resourceId; }
-    // ... etc.
+   
 }

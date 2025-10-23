@@ -15,11 +15,13 @@ public class ForgotPasswordController {
     @FXML
     void handleChangePasswordAction(ActionEvent event) {
         System.out.println(">>> 'Change Password' button clicked. Navigating to login.");
-        sceneManager.showScene("login-view.fxml", "Aicharya Login");
+        // ✅ EDITED: Corrected the file path
+        sceneManager.showScene("/com/aicharya/view/login-view.fxml", "Aicharya Login");
     }
 
     @FXML
     void handleBackToLoginAction(ActionEvent event) {
-        sceneManager.showScene("login-view.fxml", "Aicharya Login");
+        // ✅ EDITED: Corrected the file path
+        sceneManager.showScene("/com/aicharya/view/login-view.fxml", "Aicharya Login");
     }
 }

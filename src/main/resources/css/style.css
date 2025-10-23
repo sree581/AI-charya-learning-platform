@@ -1,52 +1,97 @@
-.sidebar {
-    -fx-background-color: #ede7f6; /* CHANGED: A very light purple */
-    -fx-border-color: #d1c4e9;   /* CHANGED: A soft purple border */
-    -fx-border-width: 0 1 0 0;
-    -fx-alignment: top-center;
+/* -------------------- General -------------------- */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-base: #ffffff;
+    -fx-background-color: linear-gradient(to bottom, #fefefe, #e6f0ff);
 }
 
-.sidebar-header {
-    -fx-font-size: 20px;
-    -fx-font-weight: bold;
-    -fx-padding: 0 0 10px 0;
-    -fx-border-color: #5e35b1; /* CHANGED: A strong purple accent */
-    -fx-border-width: 0 0 2px 0;
-    -fx-text-fill: #311b92;    /* CHANGED: Dark purple text */
-}
-
-.list-view {
-    -fx-background-color: transparent;
-}
-
-.list-cell {
-    -fx-background-color: transparent;
+/* -------------------- Buttons -------------------- */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #4facfe, #00f2fe);
+    -fx-text-fill: #ffffff;
     -fx-font-size: 16px;
-    -fx-padding: 10px 30px;
-    -fx-text-fill: #4527a0; /* CHANGED: Dark purple text */
-}
-
-.list-cell:hover {
-    -fx-background-color: #d1c4e9; /* CHANGED: Soft purple for hover */
-}
-
-.main-content {
-    -fx-background-color: #f8f7fa; /* CHANGED: A very light lavender-white for the main background */
-}
-
-.content-header {
-    -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #311b92; /* CHANGED: Dark purple text */
+    -fx-background-radius: 12;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 5, 0.0, 0, 3);
+    -fx-cursor: hand;
 }
 
-.course-card {
-    -fx-border-color: #b39ddb; /* CHANGED: A medium purple for the border */
-    -fx-border-width: 1px;
-    -fx-border-radius: 10px;
-    -fx-background-radius: 10px;
-    -fx-background-color: white;
-    -fx-padding: 40px;
-    -fx-alignment: center;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 2);
-    -fx-text-fill: #311b92; /* CHANGED: Dark purple text */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #43e97b, #38f9d7);
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 6, 0.0, 0, 4);
+}
+
+/* -------------------- Labels -------------------- */
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+}
+
+/* -------------------- Text Fields -------------------- */
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #4facfe;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+/* Focus effect */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #38f9d7;
+    -fx-effect: dropshadow(one-pass-box, rgba(56,249,215,0.4), 6, 0.0, 0, 2);
+}
+
+/* -------------------- Containers -------------------- */
+.vbox, .hbox, .anchor-pane {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-background-radius: 12;
+}
+
+.pane {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 4);
+}
+
+/* -------------------- Scene Titles -------------------- */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4facfe;
+}
+
+/* -------------------- Hover effects for clickable panes -------------------- */
+.pane:hover {
+    -fx-background-color: linear-gradient(to bottom, #e0f7fa, #d0f0ff);
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+}
+
+/* -------------------- ScrollPane customization -------------------- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* -------------------- Checkbox/Radio Buttons -------------------- */
+.radio-button, .check-box {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.radio-button:selected, .check-box:selected {
+    -fx-mark-color: #4facfe;
+}
+
+/* -------------------- Tooltips -------------------- */
+.tooltip {
+    -fx-background-color: #4facfe;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 6;
 }

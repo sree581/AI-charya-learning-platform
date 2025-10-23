@@ -15,11 +15,13 @@ public class FeedbackController {
     @FXML
     void handleSubmitFeedbackAction(ActionEvent event) {
         System.out.println(">>> Feedback submitted. Thank you!");
-        sceneManager.showScene("dashboard-view.fxml", "Dashboard");
+        // ✅ EDITED: Corrected the file path
+        sceneManager.showScene("/com/aicharya/view/dashboard-view.fxml", "Dashboard");
     }
 
     @FXML
     void handleBackButtonAction(ActionEvent event) {
-        sceneManager.showScene("dashboard-view.fxml", "Dashboard");
+        // ✅ EDITED: Corrected the file path
+        sceneManager.showScene("/com/aicharya/view/dashboard-view.fxml", "Dashboard");
     }
 }

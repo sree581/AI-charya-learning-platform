@@ -29,43 +29,37 @@ public class DashboardController {
 
     @FXML
     public void initialize() {
-        // Populate the sidebar navigation list
+        
         navigationList.setItems(FXCollections.observableArrayList(
             "NEED HELP?", "FEEDBACK", "LOGOUT"
         ));
 
-        // Populate the course dropdown
         courseComboBox.setItems(FXCollections.observableArrayList(
             "Java Programming", "Data Structures", "Web Development"
         ));
 
-        // Add a listener for the "Logout" button
+        // ✅ EDITED: Combined the two listeners into one for cleaner code.
         navigationList.getSelectionModel().selectedItemProperty().addListener(
             (observable, oldValue, newValue) -> {
-                if ("LOGOUT".equals(newValue)) {
-                    sceneManager.showScene("login-view.fxml", "Aicharya Login");
+                if (newValue == null) return;
+
+                switch (newValue) {
+                    case "NEED HELP?":
+                        // ✅ EDITED: Corrected the file path
+                        sceneManager.showScene("/com/aicharya/view/need-help-view.fxml", "Need Help?");
+                        break;
+                    case "FEEDBACK":
+                        // ✅ EDITED: Corrected the file path
+                        sceneManager.showScene("/com/aicharya/view/feedback-view.fxml", "Feedback");
+                        break;
+                    case "LOGOUT":
+                        // ✅ EDITED: Corrected the file path
+                        sceneManager.showScene("/com/aicharya/view/login-view.fxml", "Aicharya Login");
+                        break;
                 }
             }
         );
-        navigationList.getSelectionModel().selectedItemProperty().addListener(
-        (observable, oldValue, newValue) -> {
-            if (newValue == null) return;
-
-            switch (newValue) {
-                case "NEED HELP?":
-                    sceneManager.showScene("need-help-view.fxml", "Need Help?");
-                    break;
-                case "FEEDBACK":
-                    sceneManager.showScene("feedback-view.fxml", "Feedback");
-                    break;
-                case "LOGOUT":
-                    sceneManager.showScene("login-view.fxml", "Aicharya Login");
-                    break;
-            }
-        }
-    );
-
-        // Add a listener for the ComboBox to dynamically update the course display
+        
         courseComboBox.getSelectionModel().selectedItemProperty().addListener(
             (observable, oldValue, newValue) -> {
                 if (newValue != null) {
@@ -90,7 +84,8 @@ public class DashboardController {
         // --- THIS IS THE CRUCIAL PART THAT MAKES THE CARD CLICKABLE ---
         courseCard.setOnMouseClicked(event -> {
             System.out.println(">>> Course card for '" + courseName + "' clicked. Navigating to subtopics.");
-            sceneManager.showScene("subtopics-view.fxml", "Course Subtopics");
+            // ✅ EDITED: Corrected the file path
+            sceneManager.showScene("/com/aicharya/view/subtopics-view.fxml", "Course Subtopics");
         });
         // -----------------------------------------------------------
 

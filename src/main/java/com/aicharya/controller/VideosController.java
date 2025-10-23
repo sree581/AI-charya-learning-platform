@@ -14,6 +14,6 @@ public class VideosController {
 
     @FXML
     void handleBackButtonAction(ActionEvent event) {
-        sceneManager.showScene("course-hub-view.fxml", "Course Hub");
+        sceneManager.showScene("/com/aicharya/view/course-hub-view.fxml", "Course Hub");
     }
 }

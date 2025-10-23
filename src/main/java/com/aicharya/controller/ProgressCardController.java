@@ -8,18 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class WeakAreasController implements DataReceiver {
+public class ProgressCardController implements DataReceiver {
 
     @Autowired
     private SceneManager sceneManager;
 
     @FXML
-    private TextArea weakAreasTextArea;
+    private TextArea progressTextArea;
 
+    // Implement exactly the interface method
     @Override
     public void setData(Object data) {
         if (data != null) {
-            weakAreasTextArea.setText(data.toString());
+            progressTextArea.setText(data.toString());
         }
     }
 

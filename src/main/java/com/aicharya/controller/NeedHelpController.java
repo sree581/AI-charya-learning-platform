@@ -14,6 +14,6 @@ public class NeedHelpController {
 
     @FXML
     void handleBackButtonAction(ActionEvent event) {
-        sceneManager.showScene("dashboard-view.fxml", "Dashboard");
+        sceneManager.showScene("/com/aicharya/view/dashboard-view.fxml", "Dahboard");
     }
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.aicharya.controller.SubtopicsController">
+
+    <top>
+        <Label text="📚 Choose a Subtopic" 
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 10;" 
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+            <!-- ✅ Subtopic List -->
+            <ListView fx:id="subtopicsListView" 
+                      prefWidth="400" prefHeight="250"/>
+
+            <!-- ✅ Back Button -->
+            <Button text="Back to Dashboard" 
+                    onAction="#handleBackButtonAction"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </VBox>
+    </center>
+</BorderPane>
